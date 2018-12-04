@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>演示文档</title>
+	<script type='text/javascript' src='lib.js'></script>
+	<script type='text/javascript' src='bly.beta.min.js'></script>
+</head>
+<body>
+	<div id='app'>
+		<input tie='item'> 数据：{{item}}<br>
+		<span>{{data1.a}}</span>
+		<ul>
+			<li>{{list.li1}}</li>
+			<li>{{list.li2}}</li>
+			<li>{{list.li3}}</li>
+			<li>{{list.li4}}</li>
+		</ul>
+	</div>
+</body>
+<script>
+console.time('START TIME');
+	var app=new Bly({
+		el:'app',
+		data:{
+			item:'20',
+			data1:{a:'A的数据'},
+			list:{
+				li1:"li1",
+				li2:"li2",
+				li3:"li3",
+				li4:"li4",
+			}
+		}
+	})
+console.timeEnd('START TIME')
+</script>
+</html>
